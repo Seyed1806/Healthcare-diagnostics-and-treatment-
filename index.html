@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird - Stunning Visuals</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <h1 class="game-title">Flappy Bird</h1>
+            <div class="score-display">
+                <span class="score-label">Score:</span>
+                <span id="score">0</span>
+            </div>
+            <div class="high-score-display">
+                <span class="high-score-label">Best:</span>
+                <span id="highScore">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="600"></canvas>
+        
+        <div class="game-controls">
+            <div class="instructions">
+                <p>Press <strong>SPACE</strong> or <strong>CLICK</strong> to flap!</p>
+                <p>Navigate through the pipes and survive as long as possible!</p>
+            </div>
+            <button id="startButton" class="start-button">Start Game</button>
+            <button id="restartButton" class="restart-button" style="display: none;">Play Again</button>
+        </div>
+        
+        <div id="gameOverScreen" class="game-over-screen" style="display: none;">
+            <div class="game-over-content">
+                <h2>Game Over!</h2>
+                <p>Your Score: <span id="finalScore">0</span></p>
+                <p>High Score: <span id="finalHighScore">0</span></p>
+                <button id="playAgainButton" class="play-again-button">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="background-elements">
+        <div class="cloud cloud1"></div>
+        <div class="cloud cloud2"></div>
+        <div class="cloud cloud3"></div>
+        <div class="cloud cloud4"></div>
+    </div>
+    
+    <script src="game.js"></script>
+</body>
+</html>
